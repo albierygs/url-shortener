@@ -1,0 +1,37 @@
+# dependencies
+node_modules
+.pnpm
+.pnp
+
+# builds
+dist
+build
+out
+coverage
+
+# vite
+.vite
+
+# logs
+*.log
+
+# env
+.env
+.env.*
+
+# OS
+.DS_Store
+
+# arquivos gerados
+package-lock.json
+package.json
+pnpm-lock.yaml
+
+# arquivos compilados
+*.tsbuildinfo
+
+# outros
+README.md
+.gitignore
+public
+src/assets
