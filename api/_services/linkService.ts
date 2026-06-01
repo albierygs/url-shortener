@@ -186,7 +186,7 @@ export const getAccessesTodayGroupedByHour = async (
   `;
   const accessesToday = await db
     .select({
-      hour: hourExpr,.js
+      hour: hourExpr,
       count: count().mapWith(Number)
     })
     .from(accessLogTable)
