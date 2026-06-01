@@ -1,8 +1,8 @@
 import { and, asc, count, desc, eq, gte, sql } from "drizzle-orm";
-import { accessLogTable, linkTable } from "../_db/schema";
-import { AppException } from "../_exceptions/AppException";
-import db from "../_lib/drizzle";
-import { redisClient } from "../_lib/redis";
+import { accessLogTable, linkTable } from "../_db/schema.js";
+import { AppException } from "../_exceptions/AppException.js";
+import db from "../_lib/drizzle.js";
+import { redisClient } from "../_lib/redis.js";
 
 export const findLinkByShortId = async (
   shortId: string
@@ -186,7 +186,7 @@ export const getAccessesTodayGroupedByHour = async (
   `;
   const accessesToday = await db
     .select({
-      hour: hourExpr,
+      hour: hourExpr,.js
       count: count().mapWith(Number)
     })
     .from(accessLogTable)
