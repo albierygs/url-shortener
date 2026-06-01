@@ -1,20 +1,23 @@
 import cors from "@fastify/cors";
 import Fastify from "fastify";
-import { analyticsLinkController } from "../_controllers/analyttics-link.controller";
-import { createShortLinkController } from "../_controllers/create-short-link.controller";
-import { findFullLinkController } from "../_controllers/find-full-link.controller";
-import { AppException } from "../_exceptions/AppException";
-import { validate } from "../_middlewares/validator";
-import { analyticsLinkSchema } from "../_schemas/analyttics-link.schema";
-import { createShortLinkSchema } from "../_schemas/create-short-link.schema";
-import { findFullLinkSchema } from "../_schemas/find-full-link.schema";
+import { analyticsLinkController } from "../_controllers/analyttics-link.controller.js";
+import { createShortLinkController } from "../_controllers/create-short-link.controller.js";
+import { findFullLinkController } from "../_controllers/find-full-link.controller.js";
+import { AppException } from "../_exceptions/AppException.js";
+import { validate } from "../_middlewares/validator.js";
+import { analyticsLinkSchema } from "../_schemas/analyttics-link.schema.js";
+import { createShortLinkSchema } from "../_schemas/create-short-link.schema.js";
+import { findFullLinkSchema } from "../_schemas/find-full-link.schema.js";
 import {
   AnalyticsLinkParams,
   AnalyticsLinkQuery,
   AnalyticsLinkResponse
-} from "../_types/analyttics-link.types";
-import { CreateShortLinkRequest, CreateShortLinkResponse } from "../_types/create-short-link.types";
-import { FindFullLinkQuery, FindFullLinkResponse } from "../_types/find-full-link.types";
+} from "../_types/analyttics-link.types.js";
+import {
+  CreateShortLinkRequest,
+  CreateShortLinkResponse
+} from "../_types/create-short-link.types.js";
+import { FindFullLinkQuery, FindFullLinkResponse } from "../_types/find-full-link.types.js";
 
 const app = Fastify();
 

@@ -187,7 +187,7 @@ export const getAccessesTodayGroupedByHour = async (
   const accessesToday = await db
     .select({
       hour: hourExpr,
-      count: count()
+      count: count().mapWith(Number)
     })
     .from(accessLogTable)
     .where(and(gte(accessLogTable.accessedAt, startDay), eq(accessLogTable.linkShortId, shortId)))

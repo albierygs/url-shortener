@@ -1,11 +1,14 @@
 import { FastifyReply, FastifyRequest } from "fastify";
-import { linkTable } from "../_db/schema";
-import db from "../_lib/drizzle";
-import { BASE_URL } from "../_lib/enviroment";
-import { hashId } from "../_lib/hashid";
-import { redisClient } from "../_lib/redis";
-import { getShortIdIfLinkExists } from "../_services/linkService";
-import { CreateShortLinkRequest, CreateShortLinkResponse } from "../_types/create-short-link.types";
+import { linkTable } from "../_db/schema.js";
+import db from "../_lib/drizzle.js";
+import { BASE_URL } from "../_lib/enviroment.js";
+import { hashId } from "../_lib/hashid.js";
+import { redisClient } from "../_lib/redis.js";
+import { getShortIdIfLinkExists } from "../_services/linkService.js";
+import {
+  CreateShortLinkRequest,
+  CreateShortLinkResponse
+} from "../_types/create-short-link.types.js";
 
 export const createShortLinkController = async (
   req: FastifyRequest<{ Body: CreateShortLinkRequest }>,

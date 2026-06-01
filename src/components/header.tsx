@@ -1,10 +1,10 @@
-import { Moon, Sun, BarChart2, ArrowRight } from "lucide-react";
-import { FaGithub } from "react-icons/fa";
-import { useTheme } from "./theme-provider";
-import { useState } from "react";
-import { useNavigate } from "react-router";
-import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { ArrowRight, BarChart2, Moon, Sun } from "lucide-react";
+import { useState } from "react";
+import { FaGithub } from "react-icons/fa";
+import { useNavigate } from "react-router";
+import { useTheme } from "./theme-provider";
 
 const Header = () => {
   const { theme, setTheme } = useTheme();
@@ -52,7 +52,10 @@ const Header = () => {
         {/* Actions */}
         <div className="flex items-center gap-1">
           {showInput ? (
-            <form onSubmit={handleGoToAnalytics} className="flex items-center gap-1 mr-1 sm:mr-2 animate-in fade-in slide-in-from-right-2 duration-300">
+            <form
+              onSubmit={handleGoToAnalytics}
+              className="flex items-center gap-1 mr-1 sm:mr-2 animate-in fade-in slide-in-from-right-2 duration-300"
+            >
               <Input
                 type="text"
                 placeholder="ID ou link curto"
@@ -66,7 +69,12 @@ const Header = () => {
                   }, 150);
                 }}
               />
-              <Button type="submit" size="sm" className="h-8 px-2 shrink-0" disabled={!analyticsUrl.trim()}>
+              <Button
+                type="submit"
+                size="sm"
+                className="h-8 px-2 shrink-0"
+                disabled={!analyticsUrl.trim()}
+              >
                 <ArrowRight size={14} />
               </Button>
             </form>
@@ -92,7 +100,7 @@ const Header = () => {
           </button>
 
           <a
-            href="https://github.com/albierygs/url-shortner"
+            href="https://github.com/albierygs/url-shortener"
             target="_blank"
             rel="noopener noreferrer"
             className="w-9 h-9 rounded-md flex items-center justify-center text-muted-foreground hover:text-foreground hover:bg-accent transition-colors"

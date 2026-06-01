@@ -1,10 +1,10 @@
 import { FastifyReply, FastifyRequest } from "fastify";
 import { UAParser } from "ua-parser-js";
-import { accessLogTable } from "../_db/schema";
-import db from "../_lib/drizzle";
-import { redisClient } from "../_lib/redis";
-import { findLinkByShortId } from "../_services/linkService";
-import { FindFullLinkQuery, FindFullLinkResponse } from "../_types/find-full-link.types";
+import { accessLogTable } from "../_db/schema.js";
+import db from "../_lib/drizzle.js";
+import { redisClient } from "../_lib/redis.js";
+import { findLinkByShortId } from "../_services/linkService.js";
+import { FindFullLinkQuery, FindFullLinkResponse } from "../_types/find-full-link.types.js";
 
 export const findFullLinkController = async (
   req: FastifyRequest<{ Querystring: FindFullLinkQuery }>,

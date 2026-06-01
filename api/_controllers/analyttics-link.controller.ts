@@ -1,5 +1,5 @@
 import { FastifyReply, FastifyRequest } from "fastify";
-import { redisClient } from "../_lib/redis";
+import { redisClient } from "../_lib/redis.js";
 import {
   findLinkByShortId,
   getAccessesGrouoedByPeriod,
@@ -7,12 +7,12 @@ import {
   getDevicesTypesByPeriod,
   getRecentsLogs,
   getSummaryLinkFromPeriod
-} from "../_services/linkService";
+} from "../_services/linkService.js";
 import {
   AnalyticsLinkParams,
   AnalyticsLinkQuery,
   AnalyticsLinkResponse
-} from "../_types/analyttics-link.types";
+} from "../_types/analyttics-link.types.js";
 
 export const analyticsLinkController = async (
   req: FastifyRequest<{ Params: AnalyticsLinkParams; Querystring: AnalyticsLinkQuery }>,

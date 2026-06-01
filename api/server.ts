@@ -1,5 +1,5 @@
-import app from "./_lib/app";
-import { initRedis } from "./_lib/redis";
+import app from "./_lib/app.js";
+import { initRedis } from "./_lib/redis.js";
 
 await initRedis();
 
