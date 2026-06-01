@@ -2,7 +2,7 @@
 
 Um encurtador de URLs moderno, rápido e com um dashboard de analytics integrado, criado para simplificar o compartilhamento de links.
 
-**🌐 Projeto em Produção:** [https://[INSERIR_URL_DO_DEPLOY_AQUI]](https://[INSERIR_URL_DO_DEPLOY_AQUI])
+**🌐 Projeto em Produção:** [https://url-shortener-smoky-zeta.vercel.app/](https://url-shortener-smoky-zeta.vercel.app/)
 
 ---
 
